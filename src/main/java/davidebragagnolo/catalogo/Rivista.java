@@ -8,6 +8,10 @@ public class Rivista extends Catalogo {
         this.periodicita = periodicita;
     }
 
+    public Rivista(String isbn, String titolo, int anno, int pagine, String genere) {
+        super(Long.parseLong(isbn), titolo, anno, pagine);
+    }
+
     public Periodicita getPeriodicita() {
         return periodicita;
     }

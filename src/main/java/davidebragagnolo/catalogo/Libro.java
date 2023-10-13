@@ -4,8 +4,8 @@ public class Libro extends Catalogo {
     private String autore;
     private String genere;
 
-    public Libro(long isbn, String titolo, int anno, int pagine, String autore, String genere) {
-        super(isbn, titolo, anno, pagine);
+    public Libro(String isbn, String titolo, int anno, int pagine, String autore, String genere) {
+        super(Long.parseLong(isbn), titolo, anno, pagine);
         this.autore = autore;
         this.genere = genere;
     }

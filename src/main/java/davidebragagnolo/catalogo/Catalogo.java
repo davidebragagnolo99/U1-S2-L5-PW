@@ -1,24 +1,24 @@
 package davidebragagnolo.catalogo;
 
 public class Catalogo {
-    private long isbn;
+    protected  String codiceIsbn;
     protected String titolo;
-    protected int anno;
-    private int pagine;
+    protected int annoPubblicazione;
+    protected int numeroPagine;
 
-    public Catalogo(long isbn, String titolo, int anno, int pagine) {
-        this.isbn = isbn;
+    public Catalogo(String codiceIsbn, String titolo, int annoPubblicazione, int numeroPagine) {
+        this.codiceIsbn = codiceIsbn;
         this.titolo = titolo;
-        this.anno = anno;
-        this.pagine = pagine;
+        this.annoPubblicazione = annoPubblicazione;
+        this.numeroPagine = numeroPagine;
     }
 
-    public long getIsbn() {
-        return isbn;
+    public String getCodiceIsbn() {
+        return codiceIsbn;
     }
 
-    public void setIsbn(long isbn) {
-        this.isbn = isbn;
+    public void setCodiceIsbn(String codiceIsbn) {
+        this.codiceIsbn = codiceIsbn;
     }
 
     public String getTitolo() {
@@ -29,19 +29,19 @@ public class Catalogo {
         this.titolo = titolo;
     }
 
-    public int getAnno() {
-        return anno;
+    public int getAnnoPubblicazione() {
+        return annoPubblicazione;
     }
 
-    public void setAnno(int anno) {
-        this.anno = anno;
+    public void setAnnoPubblicazione(int annoPubblicazione) {
+        this.annoPubblicazione = annoPubblicazione;
     }
 
-    public int getPagine() {
-        return pagine;
+    public int getNumeroPagine() {
+        return numeroPagine;
     }
 
-    public void setPagine(int pagine) {
-        this.pagine = pagine;
+    public void setNumeroPagine(int numeroPagine) {
+        this.numeroPagine = numeroPagine;
     }
 }

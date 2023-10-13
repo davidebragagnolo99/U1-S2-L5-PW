@@ -10,5 +10,9 @@ public class Archivio {
         this.catalogoList = new ArrayList<>();
     }
 
-    public void 
+    public void aggiungiElemento(Catalogo elemento) {
+        catalogoList.add(elemento);
+    }
+
+
 }
