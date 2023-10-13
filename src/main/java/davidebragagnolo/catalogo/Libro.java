@@ -1,6 +1,10 @@
 package davidebragagnolo.catalogo;
 
-public class Libro extends Catalogo {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+
+public class Libro extends Catalogo implements Serializable {
     private String autore;
     private String genere;
 

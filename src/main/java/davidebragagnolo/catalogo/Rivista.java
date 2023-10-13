@@ -1,18 +1,22 @@
 package davidebragagnolo.catalogo;
 
-public class Rivista extends Catalogo {
-    private Periodicita periodicita;
+import java.io.Serializable;
 
-    public Rivista(String codiceIsbn, String titolo, int annoPubblicazione, int numeroPagine, Periodicita periodicita) {
+@SuppressWarnings("serial")
+
+public class Rivista extends Catalogo implements Serializable {
+    private String periodicità;
+
+    public Rivista(String codiceIsbn, String titolo, int annoPubblicazione, int numeroPagine, String periodicità) {
         super(codiceIsbn, titolo, annoPubblicazione, numeroPagine);
-        this.periodicita = periodicita;
+        this.periodicità = periodicità;
     }
 
-    public Periodicita getPeriodicita() {
-        return periodicita;
+    public String getPeriodicità() {
+        return periodicità;
     }
 
-    public void setPeriodicita(Periodicita periodicita) {
-        this.periodicita = periodicita;
+    public void setPeriodicità(String periodicità) {
+        this.periodicità = periodicità;
     }
 }
