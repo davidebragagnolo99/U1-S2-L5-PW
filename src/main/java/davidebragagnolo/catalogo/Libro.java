@@ -4,9 +4,18 @@ public class Libro extends Catalogo {
     private String autore;
     private String genere;
 
-    public Libro(String isbn, String titolo, int anno, int pagine, String autore, String genere) {
-        super(Long.parseLong(isbn), titolo, anno, pagine);
-        this.autore = autore;
+    public Libro(String codiceIsbn, String titolo, int annoPubblicazione, int numeroPagine, String autore,
+                 String genere) {
+        super(codiceIsbn, titolo, annoPubblicazione, numeroPagine);
+        this.setAutore(autore);
+        this.setGenere(genere);
+    }
+
+    public String getGenere() {
+        return genere;
+    }
+
+    public void setGenere(String genere) {
         this.genere = genere;
     }
 
@@ -18,17 +27,9 @@ public class Libro extends Catalogo {
         this.autore = autore;
     }
 
-    public String getGenere() {
-        return genere;
-    }
-
-    public void setGenere(String genere) {
-        this.genere = genere;
-    }
-
     @Override
     public String toString() {
-        return "Nome libro: " + " " + titolo + ", Autore: " + autore + " " + ", Pubblicazione: " + anno + " " + ", Genere: "
+        return "Nome libro: " + " " + titolo + ", Autore: " + autore + " " + ", Pubblicazione: " + annoPubblicazione + " " + ", Genere: "
                 + " " + genere;
     }
 }
